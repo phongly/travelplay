@@ -28,13 +28,19 @@
 
 
 Route::group(['middleware' => ['web']], function () {
-    //
-    Route::auth();
-    Route::get('/tasks', 'TaskController@index');
-    Route::post('/tasks', 'TaskController@store');
-    Route::delete('/task/{task}', 'TaskController@destroy');
+
+//    Route::auth();
     Route::get('/', function () {
-        return view('welcome');
+        return view('mobiles.index');
     })->middleware('guest');
 
+    Route::get('/login', function() {
+        return view('mobiles.login');
+    });
+});
+//{{route('salesperson.master.get',["option" => "dashboard-sales-quarter"])}}
+Route::group(['prefix' => 'api'], function()
+{
+    Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
+    Route::post('authenticate', 'AuthenticateController@authenticate');
 });

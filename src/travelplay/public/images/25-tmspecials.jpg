@@ -1,0 +1,4 @@
+<html><head><noscript><meta http-equiv=Refresh Content="0; URL=http://192.168.3.1:10080/ui/dynamic/guest-login.html"></noscript><script language='javascript' type='text/javascript'>function init(_frm) { if (_frm.sent.value == 0) { _frm.sent.value=1; _frm.submit(); } }</script></head><body onload=init(auth)><form name=auth action='http://192.168.3.1:10080/ui/dynamic/guest-login.html' METHOD=GET><input type=hidden name='mac_addr' value='7c:e9:d3:1a:10:53'>
+<input type=hidden name='url' value='http://livedemo00.template-help.com/prestashop_41480/img/p/2/5/25-tmspecials.jpg'>
+<input type=hidden name='ip_addr' value='192.168.3.127'>
+<input type=hidden id=sent value='0'></form></body></html>
